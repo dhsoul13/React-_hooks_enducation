@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 /// не правильно
 // let counst = 1;
 const UseRef = () => {
-  const [state, setState] = useState('');
+  const [state, setNumber] = useState('');
 
   // не вызывает рендера
   const ref = useRef(1);
@@ -48,14 +48,14 @@ const UseRef = () => {
         type="text"
         ref={focus}
         onChange={(event) => {
-          setState(event.target.value);
+          setNumber(event.target.value);
         }}
       />
 
       <button
         ref={focus}
         onClick={() => {
-          setState((prev) => prev + 1);
+          setNumber((prev) => prev + 1);
 
           focusFoo();
         }}

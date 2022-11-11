@@ -5,22 +5,22 @@ const UseStatePage = () => {
     console.log('loading...');
     return Math.floor(Math.random() * (1000 - 0 + 1)) + 0;
   };
-  //   const [state, setState] = useState(getRandomNumbers());
+  //   const [state, setNumber] = useState(getRandomNumbers());
 
-  const [state, setState] = useState(() => getRandomNumbers());
+  const [state, setNumber] = useState(() => getRandomNumbers());
 
   const add = () => {
-    setState((prev) => {
+    setNumber((prev) => {
       return prev + 1;
     });
   };
 
   const remove = () => {
-    setState((prev) => prev - 1);
+    setNumber((prev) => prev - 1);
   };
 
   const reverse = () => {
-    setState(0);
+    setNumber(0);
   };
   return (
     <div>

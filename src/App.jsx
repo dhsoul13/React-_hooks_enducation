@@ -1,4 +1,5 @@
 import UseEffectPage from './components/page/useEffect';
+import UseMemo from './components/page/useMemo';
 import UseRef from './components/page/useRef';
 import UseStatePage from './components/page/useStatePage';
 
@@ -8,7 +9,8 @@ function App() {
       <header className="App-header">
         {/* <UseStatePage /> */}
         {/* <UseEffectPage /> */}
-        <UseRef />
+        {/* <UseRef /> */}
+        <UseMemo />
       </header>
     </div>
   );
