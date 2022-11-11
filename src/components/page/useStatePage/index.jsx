@@ -8,6 +8,7 @@ const UseStatePage = () => {
   //   const [state, setState] = useState(getRandomNumbers());
 
   const [state, setState] = useState(() => getRandomNumbers());
+
   const add = () => {
     setState((prev) => {
       return prev + 1;
