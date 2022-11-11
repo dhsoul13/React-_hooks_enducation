@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import UseCallback from './components/page/useCallback';
 import UseContext from './components/page/useContext';
 import UseEffectPage from './components/page/useEffect';
@@ -6,10 +6,12 @@ import UseMemo from './components/page/useMemo';
 import UseRef from './components/page/useRef';
 import UseStatePage from './components/page/useStatePage';
 import AlertHoc from './components/page/useContext/HOC';
-
-export const AlertContext = React.createContext();
+import UseReducerHoc, { UseReducerContext } from './components/page/useReducer';
 
 function App() {
+  const info = useContext(UseReducerContext);
+
+  console.log(info);
   return (
     <AlertHoc>
       <div className="App">
@@ -18,7 +20,7 @@ function App() {
           {/* <UseEffectPage /> */}
           {/* <UseRef /> */}
           {/* <UseMemo /> */}
-          <UseContext />
+          {/* <UseContext /> */}1
         </header>
       </div>
     </AlertHoc>
