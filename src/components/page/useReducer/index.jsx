@@ -1,6 +1,6 @@
-import React, { useReducer } from 'react';
+import React, { useContext, useReducer } from 'react';
 
-export const UseReducerContext = React.createContext();
+const UseReducerContext = React.createContext();
 
 const UseReducerHoc = ({ children }) => {
   const [state, dispatch] = useReducer(
